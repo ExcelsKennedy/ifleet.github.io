@@ -1,0 +1,15 @@
+a{
+    text-decoration: none;
+}
+.logo{
+    font-size: 40px;
+    font-weight: 600;
+}
+.footer-flex{
+    display: flex;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.footer-flex div{
+    margin-right: 90px;
+}
