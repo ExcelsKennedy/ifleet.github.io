@@ -30,7 +30,8 @@
         .header h1 {
             text-align: center;
         }
-        .header p{
+
+        .header p {
             text-align: center;
         }
 
@@ -50,6 +51,41 @@
 
         .about-flex p {
             color: gray;
+        }
+
+        @media only screen and (max-width: 700px) {
+            .images {
+                display: block;
+                margin-left: 10px;
+                margin-right: 0px;
+                text-align: center;
+            }
+
+            .images div {
+                margin-bottom: 50px;
+            }
+
+            .images img {
+                width: 10cm;
+            }
+
+            .about-flex {
+                display: block;
+                margin-bottom: 10px;
+                margin-left: 10px;
+            }
+
+            .about-flex img {
+                width: 10cm;
+            }
+
+            .about-flex div {
+                margin-bottom: 20px;
+            }
+
+            .about-flex p {
+                padding-bottom: 20px;
+            }
         }
     </style>
 </head>
