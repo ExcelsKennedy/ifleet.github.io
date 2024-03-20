@@ -3,28 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ifleet-Add transport</title>
+    <title>Ifleet-Place an order</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         form{
             margin-left: 25%;
+            padding: 20px;
+            width: 40%;
+            color: gray;
         }
-        input, textarea{
-            margin-bottom: 10px;
-            width: 10cm;
-            margin-top: 5px;
-            padding: 5px;
+        textarea{
+            width: 13cm;
+            height: 3cm;
+            margin-top: 10px;
         }
         button {
-            background: blue;
+            background: darkblue;
             color: white;
             border-color: transparent;
             padding-top: 5px;
             padding-bottom: 5px;
             padding-right: 8px;
             padding-left: 8px;
-            border-radius: 10px;
             cursor: pointer;
+            width: 14cm;
+        }
+        h4{
+            padding-top: 0;
+            text-align: center;
+            width: 14.2cm;
+            background-color: darkblue;
+            color: white;
+            padding: 20px;
+            margin-left: -20px;
+            margin-top: -20px;
         }
     </style>
 </head>
@@ -66,45 +78,16 @@
             </div>
         </nav>
     </header>
+    <h1>MAKE AN ORDER</h1>
     <main>
-        <h1>ADD FREIGHT DETAILS</h1>
-        <form action="" enctype="multipart/form-data">
-            <label for="">Transport Title</label><br>
-            <input type="text" name="" id="" placeholder="Freight Title" required><br>
-            <label for="">From City</label><br>
-            <input type="text" required placeholder="Where are you coming from?"><br>
-            <label for="">To City</label><br>
-            <input type="text" required placeholder="Where are you going?"><br>
-            <label for="">Transport Quantity</label><br>
-            <input type="number" placeholder="Freight Quantity" required><br>
-            <label for="">Pickup Date</label><br>
-            <input type="date" placeholder="Pickup Date" required><br>
-            <label for="">Delivery Date</label><br>
-            <input type="date" name="" id="" placeholder="Delivery Date" required><br>
-            <label for="">Date of Publishing</label><br>
-            <input type="date" placeholder="Date of Publishing" required><br>
-            <label for="">Length[cm]</label><br>
-            <input type="number" placeholder="Freight Length" required><br>
-            <label for="">Width[cm]</label><br>
-            <input type="number" name="" id="" placeholder="Freight Width" required><br>
-            <label for="">Height[cm]</label><br>
-            <input type="number" name="" id="" placeholder="Freight Height" required><br>
-            <label for="">Price</label><br>
-            <input type="number" name="" id="" placeholder="Price" required><br>
-            <label for="">Transport Weight[kg]</label><br>
-            <input type="number" placeholder="Freight Weight" required><br>
-            <label for="">Transport Image</label><br>
-            <input type="file" required><br>
-            <label for="">Pickup Address</label><br>
-            <input type="text" placeholder="Pickup Address" required><br>
-            <label for="">Drop Address</label><br>
-            <input type="text" placeholder="Drop Address" required><br>
-            <label for="">Description</label><br>
-            <textarea placeholder="Freight Description" required></textarea><br>
-            <button>Submit</button>
+        <form action="">
+            <h4>PLACE AN OFFER</h4>
+            <label for="">Enter your message</label><br>
+            <textarea placeholder="Enter your message" required></textarea><br>
+            <button type="submit">SUBMIT</button>
         </form>
     </main>
-
+    
 
     <footer>
         <div class="footer-flex">

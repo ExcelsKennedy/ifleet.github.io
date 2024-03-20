@@ -51,6 +51,43 @@
     }
 </style>
 <body>
+    <header>
+        <nav>
+            <div class="logo"><a href="index.html">IFLEET</a></div>
+            <div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <!-- if user is authenticated -->
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <!-- Drop down menu Add new transport, Transport Report  -->
+                    <li><a href="">Administration</a>
+                        <div class="sub-menu-1">
+                            <ul>
+                                <li><a href="add_transport.html">Add new transport</a></li>
+                                <li><a href="transport_report.html">Transport Report</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <!-- Drop down menu my account, change password -->
+                    <li><a href="my_account.html">My Account</a>
+                        <div class="sub-menu-1">
+                            <ul>
+                                <li><a href="my_account.html">My Account</a></li>
+                                <li><a href="change_password.html">Change Password</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="">Logout</a></li>
+                    <!-- else -->
+
+                    <!-- <li><a href="register.html">Register</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="contact.html">Contact us</a></li> -->
+                </ul>
+            </div>
+        </nav>
+    </header>
     <main>
         <h1>CONTACT US</h1>
         <div class="contact-flex">
@@ -131,7 +168,7 @@
                     nisi reiciendis eos! Amet nobis eaque at vero dolorem?</p>
             </div>
         </div>
-        <p>Made by Excels Kennedy &copy; 2024</p>
+        <p class="end">Made by Excels Kennedy &copy; 2024</p>
     </footer>
 </body>
 </html>

@@ -1,64 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ifleet</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        .images{
+        .images {
             display: flex;
             margin-left: 10px;
             margin-right: 10px;
             text-align: center;
         }
-        .images div{
+
+        .images div {
             margin-right: 5px;
         }
-        .images img{
+
+        .images img {
             width: 11cm;
             height: 60%;
         }
-        .images p{
+
+        .images p {
             color: gray;
         }
-        .header h1{
+
+        .header h1 {
             text-align: center;
         }
-        .about-flex{
+        .header p{
+            text-align: center;
+        }
+
+        .about-flex {
             display: flex;
             margin-left: 10px;
             margin-right: 10px;
         }
-        .about-flex img{
+
+        .about-flex img {
             width: 15cm;
         }
-        .about-flex div{
+
+        .about-flex div {
             margin-right: 20px;
         }
-        .about-flex p{
+
+        .about-flex p {
             color: gray;
         }
     </style>
 </head>
+
 <body>
     <header>
         <nav>
             <div class="logo"><a href="index.html">IFLEET</a></div>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <!-- if user is authenticated -->
-                <li><a href="dashboard.html">Dashboard</a></li>
-                <li><a href="">Administration</a></li> Drop down menu
-                <li><a href="">My Account</a></li> Drop down menu
-                <li><a href="">Logout</a></li>
-                <!-- else -->
-                
-                <!-- <li><a href="register.html">Register</a></li>
+            <div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <!-- if user is authenticated -->
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <!-- Drop down menu Add new transport, Transport Report  -->
+                    <li><a href="">Administration</a>
+                        <div class="sub-menu-1">
+                            <ul>
+                                <li><a href="add_transport.html">Add new transport</a></li>
+                                <li><a href="transport_report.html">Transport Report</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <!-- Drop down menu my account, change password -->
+                    <li><a href="my_account.html">My Account</a>
+                        <div class="sub-menu-1">
+                            <ul>
+                                <li><a href="my_account.html">My Account</a></li>
+                                <li><a href="change_password.html">Change Password</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="">Logout</a></li>
+                    <!-- else -->
+
+                    <!-- <li><a href="register.html">Register</a></li>
                 <li><a href="login.html">Login</a></li>
                 <li><a href="contact.html">Contact us</a></li> -->
-            </ul>
+                </ul>
+            </div>
         </nav>
         <section class="header">
             <h1>WELCOME TO IFLEET</h1>
@@ -66,28 +97,28 @@
                 <div>
                     <img src="images/transport 1.jpg" alt="A truck">
                     <h3>Transport Management System</h3>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing 
-                        elit. Alias veritatis voluptatem praesentium voluptatum 
-                        accusamus magnam eligendi optio cumque expedita? Incidunt, 
-                        quisquam iure! Rem nihil accusamus adipisci, deserunt ullam 
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit. Alias veritatis voluptatem praesentium voluptatum
+                        accusamus magnam eligendi optio cumque expedita? Incidunt,
+                        quisquam iure! Rem nihil accusamus adipisci, deserunt ullam
                         aspernatur beatae?</p>
                 </div>
                 <div>
                     <img src="images/transport 2.jpg" alt="A truck">
                     <h3>Transport Management System</h3>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing 
-                        elit. Alias veritatis voluptatem praesentium voluptatum 
-                        accusamus magnam eligendi optio cumque expedita? Incidunt, 
-                        quisquam iure! Rem nihil accusamus adipisci, deserunt ullam 
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit. Alias veritatis voluptatem praesentium voluptatum
+                        accusamus magnam eligendi optio cumque expedita? Incidunt,
+                        quisquam iure! Rem nihil accusamus adipisci, deserunt ullam
                         aspernatur beatae?</p>
                 </div>
                 <div>
                     <img src="images/transport 3.jpg" alt="A truck">
                     <h3>Transport Management System</h3>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing 
-                        elit. Alias veritatis voluptatem praesentium voluptatum 
-                        accusamus magnam eligendi optio cumque expedita? Incidunt, 
-                        quisquam iure! Rem nihil accusamus adipisci, deserunt ullam 
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit. Alias veritatis voluptatem praesentium voluptatum
+                        accusamus magnam eligendi optio cumque expedita? Incidunt,
+                        quisquam iure! Rem nihil accusamus adipisci, deserunt ullam
                         aspernatur beatae?</p>
                 </div>
             </div>
@@ -102,29 +133,29 @@
                 </div>
                 <div>
                     <h3>ABOUT IFLEET</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque deserunt 
-                        sapiente natus asperiores earum minima, inventore harum eligendi. Modi 
-                        tempore dolor vero qui alias vitae quisquam autem consequuntur veritatis 
-                        dicta. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque deserunt 
-                        sapiente natus asperiores earum minima, inventore harum eligendi. Modi 
-                        tempore dolor vero qui alias vitae quisquam autem consequuntur veritatis 
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque deserunt
+                        sapiente natus asperiores earum minima, inventore harum eligendi. Modi
+                        tempore dolor vero qui alias vitae quisquam autem consequuntur veritatis
+                        dicta. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque deserunt
+                        sapiente natus asperiores earum minima, inventore harum eligendi. Modi
+                        tempore dolor vero qui alias vitae quisquam autem consequuntur veritatis
                         dicta.</p>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque deserunt 
-                        sapiente natus asperiores earum minima, inventore harum eligendi. Modi 
-                        tempore dolor vero qui alias vitae quisquam autem consequuntur veritatis 
-                        dicta. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque deserunt 
-                        sapiente natus asperiores earum minima, inventore harum eligendi. Modi 
-                        tempore dolor vero qui alias vitae quisquam autem consequuntur veritatis 
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque deserunt
+                        sapiente natus asperiores earum minima, inventore harum eligendi. Modi
+                        tempore dolor vero qui alias vitae quisquam autem consequuntur veritatis
+                        dicta. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque deserunt
+                        sapiente natus asperiores earum minima, inventore harum eligendi. Modi
+                        tempore dolor vero qui alias vitae quisquam autem consequuntur veritatis
                         dicta.</p>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque deserunt 
-                        sapiente natus asperiores earum minima, inventore harum eligendi. Modi 
-                        tempore dolor vero qui alias vitae quisquam autem consequuntur veritatis 
-                        dicta. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque deserunt 
-                        sapiente natus asperiores earum minima, inventore harum eligendi. Modi 
-                        tempore dolor vero qui alias vitae quisquam autem consequuntur veritatis 
-                        dicta. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque deserunt 
-                        sapiente natus asperiores earum minima, inventore harum eligendi. Modi 
-                        tempore dolor vero qui alias vitae quisquam autem consequuntur veritatis 
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque deserunt
+                        sapiente natus asperiores earum minima, inventore harum eligendi. Modi
+                        tempore dolor vero qui alias vitae quisquam autem consequuntur veritatis
+                        dicta. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque deserunt
+                        sapiente natus asperiores earum minima, inventore harum eligendi. Modi
+                        tempore dolor vero qui alias vitae quisquam autem consequuntur veritatis
+                        dicta. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque deserunt
+                        sapiente natus asperiores earum minima, inventore harum eligendi. Modi
+                        tempore dolor vero qui alias vitae quisquam autem consequuntur veritatis
                         dicta.</p>
                 </div>
             </div>
@@ -167,9 +198,10 @@
                     nisi reiciendis eos! Amet nobis eaque at vero dolorem?</p>
             </div>
         </div>
-        <p>Made by Excels Kennedy &copy; 2024</p>
+        <p class="end">Made by Excels Kennedy &copy; 2024</p>
     </footer>
-    
+
 
 </body>
+
 </html>

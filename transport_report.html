@@ -9,14 +9,68 @@
         table{
             text-align: center;
         }
+        table, th, td{
+            /* border: 1px solid black; */
+            border-collapse: collapse;
+        }
+        td{
+            width: 3cm;
+        }
+        thead{
+            background-color: darkblue;
+            color: white;
+        }
+        .gray{
+            background-color: gray;
+            color: white;
+        }
+        tfoot{
+            background-color: gray;
+        }
     </style>
 </head>
 <body>
+    <header>
+        <nav>
+            <div class="logo"><a href="index.html">IFLEET</a></div>
+            <div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <!-- if user is authenticated -->
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <!-- Drop down menu Add new transport, Transport Report  -->
+                    <li><a href="">Administration</a>
+                        <div class="sub-menu-1">
+                            <ul>
+                                <li><a href="add_transport.html">Add new transport</a></li>
+                                <li><a href="transport_report.html">Transport Report</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <!-- Drop down menu my account, change password -->
+                    <li><a href="my_account.html">My Account</a>
+                        <div class="sub-menu-1">
+                            <ul>
+                                <li><a href="my_account.html">My Account</a></li>
+                                <li><a href="change_password.html">Change Password</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="">Logout</a></li>
+                    <!-- else -->
+
+                    <!-- <li><a href="register.html">Register</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="contact.html">Contact us</a></li> -->
+                </ul>
+            </div>
+        </nav>
+    </header>
     <main>
         <h1>FREIGHTS DETAILS</h1>
         <table>
             <thead>
-            <!-- <tr> -->
                 <td>ID</td>
                 <td>Image</td>
                 <td>Freight Title</td>
@@ -32,11 +86,11 @@
                 <td>Width</td>
                 <td>Height</td>
                 <td>Price</td>
-            <!-- </tr> -->
             </thead>
-            <tr>
+            <tbody>
+            <tr class="gray">
                 <td>1</td>
-                <td><img src="images/freight.jpg" alt="freight" width="150"></td>
+                <td><a href="details.html"><img src="images/freight.jpg" alt="freight" width="150"></a></td>
                 <td>Freight 1</td>
                 <td>19-03-2024</td>
                 <td>Excels Kennedy</td>
@@ -47,10 +101,13 @@
                 <td>2 items</td>
                 <td>2000KG</td>
                 <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
             </tr>
             <tr>
                 <td>2</td>
-                <td><img src="images/freight.jpg" alt="freight" width="150"></td>
+                <td><a href="details.html"><img src="images/freight.jpg" alt="freight" width="150"></a></td>
                 <td>Freight 2</td>
                 <td>19-03-2024</td>
                 <td>Excels Kennedy</td>
@@ -61,10 +118,13 @@
                 <td>2 items</td>
                 <td>2000KG</td>
                 <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
             </tr>
-            <tr>
+            <tr class="gray">
                 <td>3</td>
-                <td><img src="images/freight.jpg" alt="freight" width="150"></td>
+                <td><a href="details.html"><img src="images/freight.jpg" alt="freight" width="150"></a></td>
                 <td>Freight 3</td>
                 <td>19-03-2024</td>
                 <td>Excels Kennedy</td>
@@ -75,10 +135,13 @@
                 <td>2 items</td>
                 <td>2000KG</td>
                 <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
             </tr>
             <tr>
                 <td>4</td>
-                <td><img src="images/freight.jpg" alt="freight" width="150"></td>
+                <td><a href="details.html"><img src="images/freight.jpg" alt="freight" width="150"></a></td>
                 <td>Freight 4</td>
                 <td>19-03-2024</td>
                 <td>Excels Kennedy</td>
@@ -89,10 +152,13 @@
                 <td>2 items</td>
                 <td>2000KG</td>
                 <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
             </tr>
-            <tr>
+            <tr class="gray">
                 <td>5</td>
-                <td><img src="images/freight.jpg" alt="freight" width="150"></td>
+                <td><a href="details.html"><img src="images/freight.jpg" alt="freight" width="150"></a></td>
                 <td>Freight 5</td>
                 <td>19-03-2024</td>
                 <td>Excels Kennedy</td>
@@ -103,10 +169,13 @@
                 <td>6 items</td>
                 <td>2000KG</td>
                 <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
             </tr>
             <tr>
                 <td>6</td>
-                <td><img src="images/freight.jpg" alt="freight" width="150"></td>
+                <td><a href="details.html"><img src="images/freight.jpg" alt="freight" width="150"></a></td>
                 <td>Freight 6</td>
                 <td>19-03-2024</td>
                 <td>Excels Kennedy</td>
@@ -117,10 +186,13 @@
                 <td>2 items</td>
                 <td>2000KG</td>
                 <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
             </tr>
-            <tr>
+            <tr class="gray">
                 <td>7</td>
-                <td><img src="images/freight.jpg" alt="freight" width="150"></td>
+                <td><a href="details.html"><img src="images/freight.jpg" alt="freight" width="150"></a></td>
                 <td>Freight 7</td>
                 <td>19-03-2024</td>
                 <td>Excels Kennedy</td>
@@ -131,10 +203,13 @@
                 <td>8 items</td>
                 <td>2000KG</td>
                 <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
             </tr>
             <tr>
                 <td>8</td>
-                <td><img src="images/freight.jpg" alt="freight" width="150"></td>
+                <td><a href="details.html"><img src="images/freight.jpg" alt="freight" width="150"></a></td>
                 <td>Freight 8</td>
                 <td>19-03-2024</td>
                 <td>Excels Kennedy</td>
@@ -145,10 +220,13 @@
                 <td>1 items</td>
                 <td>2000KG</td>
                 <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
             </tr>
-            <tr>
+            <tr class="gray">
                 <td>9</td>
-                <td><img src="images/freight.jpg" alt="freight" width="150"></td>
+                <td><a href="details.html"><img src="images/freight.jpg" alt="freight" width="150"></a></td>
                 <td>Freight 9</td>
                 <td>19-03-2024</td>
                 <td>Excels Kennedy</td>
@@ -159,10 +237,13 @@
                 <td>7 items</td>
                 <td>2000KG</td>
                 <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
             </tr>
             <tr>
                 <td>10</td>
-                <td><img src="images/freight.jpg" alt="freight" width="150"></td>
+                <td><a href="details.html"><img src="images/freight.jpg" alt="freight" width="150"></a></td>
                 <td>Freight 10</td>
                 <td>19-03-2024</td>
                 <td>Excels Kennedy</td>
@@ -173,7 +254,11 @@
                 <td>2 items</td>
                 <td>2000KG</td>
                 <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
             </tr>
+        </tbody>
         </table>
     </main>
     <footer>
@@ -212,7 +297,7 @@
                     nisi reiciendis eos! Amet nobis eaque at vero dolorem?</p>
             </div>
         </div>
-        <p>Made by Excels Kennedy &copy; 2024</p>
+        <p class="end">Made by Excels Kennedy &copy; 2024</p>
     </footer>
 </body>
 </html>
