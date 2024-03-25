@@ -6,13 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ifleet-Register</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+    <script src="https://kit.fontawesome.com/4175a2b915.js" crossorigin="anonymous"></script>
     <style>
-        form {
-            color: gray;
-            width: 50%;
-            margin-left: 25%;
-        }
-
         .flex {
             display: flex;
         }
@@ -37,6 +33,64 @@
             border-radius: 10px;
             cursor: pointer;
         }
+
+        h1 {
+            text-align: left;
+            padding-left: 10%;
+            background-color: rgb(41, 8, 160);
+            color: white;
+            margin-bottom: 40px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        hr {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        body {
+            background-color: #eee;
+        }
+
+        form {
+            background-color: white;
+            padding: 40px;
+            margin-bottom: 20px;
+            margin-top: 150px;
+            margin-left: 25%;
+            width: 50%;
+        }
+
+        @media only screen and (max-width: 700px) {
+            .flex {
+                display: block;
+            }
+
+            .flex div {
+                margin-bottom: 0px;
+            }
+
+            input {
+                margin-bottom: 20px;
+                margin-top: 5px;
+            }
+
+            h1 {
+                text-align: center;
+                margin-bottom: 20px;
+                font-size: 16px;
+            }
+
+            form {
+                background-color: white;
+                padding-left: 50px;
+                margin-bottom: 20px;
+                margin-top: 120px;
+                margin-left: 25px;
+                width: 90vw;
+            }
+        }
     </style>
 </head>
 
@@ -45,6 +99,7 @@
         <nav>
             <div class="logo"><a href="index.html">IFLEET</a></div>
             <div>
+                <i class="fa fa-times" onclick="hideMenu()"></i>
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
@@ -76,10 +131,10 @@
                 <li><a href="contact.html">Contact us</a></li> -->
                 </ul>
             </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
         </nav>
     </header>
     <main>
-        <h1>USERS MANAGEMENT</h1>
         <!-- <center> -->
         <form action="" enctype="multipart/form-data">
             <h1>USER REGISTRATION FORM</h1>
@@ -198,6 +253,21 @@
         </div>
         <p class="end">Made by Excels Kennedy &copy; 2024</p>
     </footer>
+
+
+
+    <!-- Javascript for Toggle Menu -->
+    <script>
+
+        var navLinks = document.getElementById("navLinks");
+        function showMenu(){
+            navLinks.style.right = "0";
+        }
+        function hideMenu(){
+            navLinks.style.right = "-200px";
+        }
+
+    </script>
 </body>
 
 </html>

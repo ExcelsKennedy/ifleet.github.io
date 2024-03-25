@@ -1,20 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Ifleet</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+    <script src="https://kit.fontawesome.com/4175a2b915.js" crossorigin="anonymous"></script>
 </head>
 <style>
-    .contact-flex{
+    .contact-flex {
         display: flex;
         margin-left: 50px;
     }
-    .contact-flex div{
+
+    .contact-flex div {
         margin-right: 40px;
     }
-    .card{
+
+    .card {
         border-style: solid;
         margin-bottom: 20px;
         border-color: gray;
@@ -24,18 +29,18 @@
         padding-right: 200px;
         padding-left: 20px;
     }
-    form{
-        color: gray;
-    }
-    
-    input, textarea{
+
+    input,
+    textarea {
         width: 15cm;
         margin-bottom: 10px;
     }
-    textarea{
+
+    textarea {
         height: 100px;
     }
-    button{
+
+    button {
         background: blue;
         color: white;
         border-color: transparent;
@@ -46,15 +51,83 @@
         border-radius: 10px;
         cursor: pointer;
     }
-    .map{
+
+    .map {
         margin-left: 100px;
+        width: 600px;
+        height: 450px;
+    }
+
+    h1 {
+        text-align: left;
+        padding-left: 10%;
+        background-color: rgb(41, 8, 160);
+        color: white;
+        margin-bottom: 40px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-top: 90px;
+    }
+
+    body {
+        background-color: #eee;
+    }
+
+    form {
+        background-color: white;
+        padding: 40px;
+        margin-bottom: 20px;
+        color: gray;
+    }
+
+    @media only screen and (max-width: 700px) {
+        .contact-flex {
+            display: block;
+            margin-left: 20px;
+        }
+
+        .contact-flex div {
+            margin-bottom: 20px;
+        }
+
+        .card {
+            width: 90vw;
+            padding-right: 0px;
+        }
+
+        input,
+        textarea {
+            width: 80vw;
+            margin-bottom: 10px;
+        }
+
+        textarea {
+            height: 100px;
+        }
+
+        .map {
+            margin-left: 20px;
+            width: 90vw;
+            height: fit-content;
+        }
+
+        h1 {
+            text-align: left;
+        }
+        form {
+            width: 90vw;
+            padding: 20px;
+            margin-bottom: 40px;
+        }
     }
 </style>
+
 <body>
     <header>
         <nav>
             <div class="logo"><a href="index.html">IFLEET</a></div>
             <div>
+                <i class="fa fa-times" onclick="hideMenu()"></i>
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
@@ -86,6 +159,7 @@
                 <li><a href="contact.html">Contact us</a></li> -->
                 </ul>
             </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
         </nav>
     </header>
     <main>
@@ -127,7 +201,10 @@
         </div>
 
         <div class="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.4055208330165!2d34.60536157423514!3d-0.8242033991677835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182b49f52ae796bd%3A0x4b5c694d2099db28!2sRONGO%20UNIVERSITY!5e0!3m2!1sen!2ske!4v1710847581607!5m2!1sen!2ske" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.4055208330165!2d34.60536157423514!3d-0.8242033991677835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182b49f52ae796bd%3A0x4b5c694d2099db28!2sRONGO%20UNIVERSITY!5e0!3m2!1sen!2ske!4v1710847581607!5m2!1sen!2ske"
+                 style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </main>
 
@@ -170,5 +247,19 @@
         </div>
         <p class="end">Made by Excels Kennedy &copy; 2024</p>
     </footer>
+
+    <!-- Javascript for Toggle Menu -->
+    <script>
+
+        var navLinks = document.getElementById("navLinks");
+        function showMenu(){
+            navLinks.style.right = "0";
+        }
+        function hideMenu(){
+            navLinks.style.right = "-200px";
+        }
+
+    </script>
 </body>
+
 </html>

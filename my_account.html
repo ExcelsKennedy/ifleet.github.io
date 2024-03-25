@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ifleet-User Profile</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+    <script src="https://kit.fontawesome.com/4175a2b915.js" crossorigin="anonymous"></script>
     <style>
         form {
             color: gray;
@@ -36,6 +38,25 @@
             border-radius: 10px;
             cursor: pointer;
         }
+        h1{
+        text-align: left;
+        padding-left: 10%;
+        background-color: rgb(41, 8, 160);
+        color: white;
+        margin-bottom: 40px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    body {
+            background-color: #eee;
+        }
+
+        form {
+            background-color: white;
+            padding: 40px;
+            margin-bottom: 20px;
+            margin-top: 50px;
+        }
     </style>
 </head>
 <body>
@@ -43,6 +64,7 @@
         <nav>
             <div class="logo"><a href="index.html">IFLEET</a></div>
             <div>
+                <i class="fa fa-times" onclick="hideMenu()"></i>
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
@@ -74,10 +96,11 @@
                 <li><a href="contact.html">Contact us</a></li> -->
                 </ul>
             </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
         </nav>
     </header>
+    <h1 style="margin-top: 90px;">USERS PROFILE</h1>
     <main>
-        <h1>USERS PROFILE</h1>
         <!-- <center> -->
         <form action="" enctype="multipart/form-data">
             <h1>USER REGISTRATION FORM</h1>
@@ -183,5 +206,18 @@
         </div>
         <p class="end">Made by Excels Kennedy &copy; 2024</p>
     </footer>
+
+    <!-- Javascript for Toggle Menu -->
+    <script>
+
+        var navLinks = document.getElementById("navLinks");
+        function showMenu(){
+            navLinks.style.right = "0";
+        }
+        function hideMenu(){
+            navLinks.style.right = "-200px";
+        }
+
+    </script>
 </body>
 </html>

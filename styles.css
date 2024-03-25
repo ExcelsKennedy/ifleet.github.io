@@ -1,52 +1,68 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-a{
+
+a {
     text-decoration: none;
     color: white;
 }
-.logo{
+
+.logo {
     font-size: 40px;
     font-weight: 600;
     margin: 20px;
 }
-nav{
+
+nav {
     background: darkblue;
     display: flex;
-    margin-bottom: 40px;
+    position: fixed;
+    width: 100%;
+    top: 0;
 }
-nav ul{
+
+nav ul {
     display: flex;
     list-style: none;
     text-align: center;
     justify-content: center;
 }
-nav ul li{
+
+nav ul li {
     width: 120px;
     margin: 15px;
     padding: 15px;
 }
-nav a{
+
+nav a {
     color: white;
 }
-.sub-menu-1{
+
+nav .fa {
     display: none;
 }
-nav ul li:hover .sub-menu-1{
+
+.sub-menu-1 {
+    display: none;
+}
+
+nav ul li:hover .sub-menu-1 {
     display: block;
     position: absolute;
     background-color: darkblue;
     margin-top: 15px;
     margin-left: -15px;
 }
-nav ul li:hover .sub-menu-1 ul{
+
+nav ul li:hover .sub-menu-1 ul {
     display: block;
     margin: 10px;
 }
-nav ul li:hover .sub-menu-1 ul li{
+
+nav ul li:hover .sub-menu-1 ul li {
     width: 150px;
     padding: 10px;
     border-bottom: 1px dotted white;
@@ -54,25 +70,111 @@ nav ul li:hover .sub-menu-1 ul li{
     border-radius: 0;
     text-align: left;
 }
-nav ul li:hover .sub-menu-1 ul li:last-child{
+
+nav ul li:hover .sub-menu-1 ul li:last-child {
     border-bottom: none;
 }
-footer{
+
+@media only screen and (max-width: 700px) {
+    @media only screen and (max-width: 700px) {
+        .logo {
+            font-size: 30px;
+            font-weight: 600;
+            margin: 20px;
+        }
+    
+        nav {
+            background: darkblue;
+            display: flex;
+            position: fixed;
+            height: 100vh;
+            width: 200px;
+            top: 0;
+            right: -200px;
+            text-align: left;
+            z-index: 2;
+            transition: 1s;
+        }
+    
+        nav ul {
+            padding: 30px;
+        }
+    
+        nav ul li {
+            display: block;
+        }
+    
+        nav a {
+            color: white;
+        }
+        
+        nav .fa{
+            display: block;
+            color: #fff;
+            margin: 10px;
+            font-size: 22px;
+            cursor: pointer;
+        }
+    
+        .sub-menu-1,
+        .sub-menu-2 {
+            display: block; /* Show sub-menus */
+            position: absolute;
+            background-color: darkblue;
+            margin-top: 15px;
+            margin-left: -15px;
+        }
+    
+        nav ul li:hover .sub-menu-1,
+        nav ul li:hover .sub-menu-2 {
+            display: block; /* Show sub-menu on hover */
+        }
+    
+        nav ul li:hover .sub-menu-1 ul,
+        nav ul li:hover .sub-menu-2 ul {
+            display: block;
+            margin: 10px;
+        }
+    
+        nav ul li:hover .sub-menu-1 ul li,
+        nav ul li:hover .sub-menu-2 ul li {
+            width: 150px;
+            padding: 10px;
+            border-bottom: 1px dotted white;
+            background: transparent;
+            border-radius: 0;
+            text-align: left;
+        }
+    
+        nav ul li:hover .sub-menu-1 ul li:last-child,
+        nav ul li:hover .sub-menu-2 ul li:last-child {
+            border-bottom: none;
+        }
+    }
+    
+}
+
+footer {
     background-color: darkblue;
     color: white;
     margin-top: 40px;
 }
-footer h2{
-    margin-bottom: 20px;
+
+footer h2 {
+    padding-bottom: 20px;
 }
-footer p, ul li{
-    margin-bottom: 10px;
+
+footer p,
+ul li {
+    padding-bottom: 10px;
 }
-.end{
+
+.end {
     text-align: center;
     padding-bottom: 40px;
 }
-.footer-flex{
+
+.footer-flex {
     display: flex;
     margin-left: 10px;
     margin-right: 10px;
@@ -80,24 +182,31 @@ footer p, ul li{
     padding-bottom: 50px;
     padding-left: 50px;
 }
-.footer-flex div{
+
+.footer-flex div {
     margin-right: 90px;
 }
+
 @media only screen and (max-width: 700px) {
-    footer{
+    footer {
         margin-top: 20px;
     }
-    footer h2{
+
+    footer h2 {
         margin-bottom: 10px;
     }
-    footer p, ul li{
+
+    footer p,
+    ul li {
         margin-bottom: 5px;
     }
-    .end{
+
+    .end {
         text-align: center;
-        padding-bottom:40px;
+        padding-bottom: 40px;
     }
-    .footer-flex{
+
+    .footer-flex {
         display: block;
         margin-left: 5px;
         margin-right: 5px;
@@ -105,7 +214,8 @@ footer p, ul li{
         padding-bottom: 20px;
         padding-left: 10px;
     }
-    .footer-flex div{
+
+    .footer-flex div {
         margin-right: 10px;
         padding-bottom: 20px;
         margin-left: 10px;
