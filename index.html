@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ifleet</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
-    <script src="https://kit.fontawesome.com/4175a2b915.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         .images {
             display: flex;
@@ -60,13 +59,10 @@
             color: white;
             margin-bottom: 40px;
             padding: 40px;
-            margin-top: 90px;
+            margin-top: 70px;
         }
 
         @media only screen and (max-width: 700px) {
-            h1{
-                margin-top: 0;
-            }
             .images {
                 display: block;
                 margin-left: 10px;
@@ -105,42 +101,41 @@
 
 <body>
     <header>
-        <nav id="navLinks">
-            <div class="logo"><a href="index.html">IFLEET</a></div>
-            <div>
-                <i class="fa fa-times" onclick="hideMenu()"></i>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <!-- if user is authenticated -->
-                    <li><a href="dashboard.html">Dashboard</a></li>
-                    <!-- Drop down menu Add new transport, Transport Report  -->
-                    <li><a href="">Administration</a>
-                        <div class="sub-menu-1">
-                            <ul>
-                                <li><a href="add_transport.html">Add new transport</a></li>
-                                <li><a href="transport_report.html">Transport Report</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <!-- Drop down menu my account, change password -->
-                    <li><a href="my_account.html">My Account</a>
-                        <div class="sub-menu-1">
-                            <ul>
-                                <li><a href="my_account.html">My Account</a></li>
-                                <li><a href="change_password.html">Change Password</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li><a href="">Logout</a></li>
-                    <!-- else -->
-
-                    <!-- <li><a href="register.html">Register</a></li>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="contact.html">Contact us</a></li> -->
-                </ul>
-            </div>
-            <i class="fa fa-bars" onclick="showMenu()"></i>
+        <nav>
+            <div class="topnav" id="myTopnav">
+                <div class="logo">
+                  <a href="index.html">IFLEET</a>
+                </div>
+                <a href="index.html" class="active">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact Us</a>
+                <!-- if user is authenticated -->
+                <a href="dashboard.html">Dashboard</a>
+                <div class="dropdown">
+                  <button class="dropbtn">Administration
+                    <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div class="dropdown-content">
+                    <a href="add_transport.html">Add new transport</a>
+                    <a href="transport_report.html">Transport Report</a>
+                  </div>
+                </div>
+                <div class="dropdown">
+                  <button class="dropbtn">My Account
+                    <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div class="dropdown-content">
+                    <a href="my_account.html">My Account</a>
+                    <a href="change_password.html">Change Password</a>
+                  </div>
+                </div>
+                <a href="">Logout</a>
+                <!-- else -->
+                <!-- <a href="register.html">Register</a>
+                <a href="login.html">Login</a>
+                <a href="contact.html">Contact us</a> -->
+                <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+              </div>
         </nav>
         <section class="header">
             <h1>WELCOME TO IFLEET</h1>
@@ -252,17 +247,15 @@
         <p class="end">Made by Excels Kennedy &copy; 2024</p>
     </footer>
 
-    <!-- Javascript for Toggle Menu -->
     <script>
-
-        var navLinks = document.getElementById("navLinks");
-        function showMenu(){
-            navLinks.style.right = "0";
+      function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
         }
-        function hideMenu(){
-            navLinks.style.right = "-200px";
-        }
-
+      }
     </script>
 
 

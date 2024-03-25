@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ifleet-User Profile</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
     <script src="https://kit.fontawesome.com/4175a2b915.js" crossorigin="anonymous"></script>
     <style>
         form {
             color: gray;
             width: 50%;
             margin-left: 25%;
+            background-color: white;
+            padding: 40px;
+            margin-bottom: 20px;
+            margin-top: 50px;
         }
 
         .flex {
@@ -27,79 +33,102 @@
             margin-top: 5px;
         }
 
-        button {
-            background: blue;
+        h1 {
+            text-align: left;
+            padding-left: 10%;
+            background-color: rgb(41, 8, 160);
             color: white;
-            border-color: transparent;
-            padding-top: 5px;
-            padding-bottom: 5px;
-            padding-right: 8px;
-            padding-left: 8px;
-            border-radius: 10px;
-            cursor: pointer;
+            margin-bottom: 40px;
+            padding-top: 20px;
+            padding-bottom: 20px;
         }
-        h1{
-        text-align: left;
-        padding-left: 10%;
-        background-color: rgb(41, 8, 160);
-        color: white;
-        margin-bottom: 40px;
-        padding-top: 20px;
-        padding-bottom: 20px;
-    }
-    body {
+
+        hr {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        body {
             background-color: #eee;
         }
 
-        form {
-            background-color: white;
-            padding: 40px;
-            margin-bottom: 20px;
-            margin-top: 50px;
+        @media only screen and (max-width: 700px) {
+            form {
+                width: 90vw;
+                margin-left: 25px;
+                padding-left: 50px;
+                margin-top: 20px;
+            }
+
+            form h1{
+                font-size: 18px;
+            }
+
+            .flex {
+                display: block;
+            }
+
+            .flex div {
+                margin-bottom: 0;
+            }
+
+            h1 {
+                text-align: center;
+                padding-left: 0;
+            }
+
+            hr {
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+
+            body {
+                background-color: #eee;
+            }
         }
     </style>
 </head>
+
 <body>
     <header>
         <nav>
-            <div class="logo"><a href="index.html">IFLEET</a></div>
-            <div>
-                <i class="fa fa-times" onclick="hideMenu()"></i>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <!-- if user is authenticated -->
-                    <li><a href="dashboard.html">Dashboard</a></li>
-                    <!-- Drop down menu Add new transport, Transport Report  -->
-                    <li><a href="">Administration</a>
-                        <div class="sub-menu-1">
-                            <ul>
-                                <li><a href="add_transport.html">Add new transport</a></li>
-                                <li><a href="transport_report.html">Transport Report</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <!-- Drop down menu my account, change password -->
-                    <li><a href="my_account.html">My Account</a>
-                        <div class="sub-menu-1">
-                            <ul>
-                                <li><a href="my_account.html">My Account</a></li>
-                                <li><a href="change_password.html">Change Password</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li><a href="">Logout</a></li>
-                    <!-- else -->
-
-                    <!-- <li><a href="register.html">Register</a></li>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="contact.html">Contact us</a></li> -->
-                </ul>
+            <div class="topnav" id="myTopnav">
+                <div class="logo">
+                    <a href="index.html">IFLEET</a>
+                </div>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact Us</a>
+                <!-- if user is authenticated -->
+                <a href="dashboard.html">Dashboard</a>
+                <div class="dropdown">
+                    <button class="dropbtn">Administration
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="add_transport.html">Add new transport</a>
+                        <a href="transport_report.html">Transport Report</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">My Account
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="my_account.html" class="active">My Account</a>
+                        <a href="change_password.html">Change Password</a>
+                    </div>
+                </div>
+                <a href="">Logout</a>
+                <!-- else -->
+                <!-- <a href="register.html">Register</a>
+                <a href="login.html">Login</a>
+                <a href="contact.html">Contact us</a> -->
+                <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
             </div>
-            <i class="fa fa-bars" onclick="showMenu()"></i>
         </nav>
     </header>
-    <h1 style="margin-top: 90px;">USERS PROFILE</h1>
+    <h1 style="margin-top: 70px;">USERS PROFILE</h1>
     <main>
         <!-- <center> -->
         <form action="" enctype="multipart/form-data">
@@ -116,7 +145,7 @@
             <label for="">Account type</label><br>
             <input type="radio" name="" id="" required>
             <label for="">Company</label>
-            <input type="radio" name="" id="" required >
+            <input type="radio" name="" id="" required>
             <label for="">Private person</label><br>
 
             <div class="flex">
@@ -209,15 +238,15 @@
 
     <!-- Javascript for Toggle Menu -->
     <script>
-
-        var navLinks = document.getElementById("navLinks");
-        function showMenu(){
-            navLinks.style.right = "0";
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
         }
-        function hideMenu(){
-            navLinks.style.right = "-200px";
-        }
-
     </script>
 </body>
+
 </html>
