@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ifleet-Transport Report</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+  <script src="https://kit.fontawesome.com/4175a2b915.js" crossorigin="anonymous"></script>
+</head>
+<style>
+  body {
+    background-color: #eee;
+  }
+
+  main {
+    padding-top: 50px;
+    margin-left: 25%;
+  }
+
+  form {
+    width: 50vw;
+    background-color: white;
+    padding: 20px;
+  }
+
+  input {
+    width: 40vw;
+  }
+
+  @media only screen and (max-width: 770px) {
+    main {
+      padding-top: 50px;
+      margin-left: 25px;
+    }
+
+    form {
+      width: 90vw;
+      background-color: white;
+      padding: 20px;
+    }
+
+    input {
+      width: 80vw;
+    }
+  }
+</style>
+
+<body>
+  <header>
+    <nav>
+      <div class="topnav" id="myTopnav">
+        <div class="logo">
+          <a href="index.html">IFLEET</a>
+        </div>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact Us</a>
+        <!-- if user is authenticated -->
+        <a href="dashboard.html">Dashboard</a>
+        <div class="dropdown">
+          <button class="dropbtn">Administration
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="add_transport.html">Add new transport</a>
+            <a href="transport_report.html" class="active">Transport Report</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">My Account
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="my_account.html">My Account</a>
+            <a href="change_password.html">Change Password</a>
+          </div>
+        </div>
+        <a href="">Logout</a>
+        <!-- else -->
+        <!-- <a href="register.html">Register</a>
+                <a href="login.html">Login</a>
+                <a href="contact.html">Contact us</a> -->
+        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+      </div>
+    </nav>
+  </header>
+
+
+  <div style="display: flex; margin-top: 100px; background-color: white; padding-left: 20px;">
+    <h1>New Vehicle</h1>
+    <div style="margin-top: 10px; margin-left: 150px;">
+      <button
+        style="background-color: #eee; margin-bottom: 10px; border-radius: 10px; cursor: pointer; color: darkblue; padding-top: 5px; padding-bottom: 5px; padding-left: 10px; padding-right: 10px; border: none;">Cancel</button>
+      <button
+        style="background-color: darkblue; border-radius: 10px; cursor: pointer; color: white; padding-top: 5px; padding-bottom: 5px; padding-left: 10px; padding-right: 10px; border: none;"><a
+          href="vehicles.html">See Vehicles</a></button>
+    </div>
+  </div>
+  <main>
+    <form method="post" enctype="multipart/form-data">
+      <h1>Identification</h1>
+      <label>Vehicle Name *</label><br>
+      <input type="text"><br>
+      <label>Type *</label><br>
+      <select>
+        <option value="Car">Car</option>
+        <option value="Truck">Truck</option>
+        <option value="Pickup">Pickup</option>
+        <option value="Van">Van</option>
+      </select><br>
+      <label>Year</label><br>
+      <input type="number">
+      <p>e.g. 2006, 2012, etc.</p>
+      <label>Make *</label><br>
+      <input type="text"><br>
+      <p>e.g. Toyota, Ford, etc.</p>
+      <label>Model *</label><br>
+      <input type="text" name="" id="">
+      <p>e.g. Corolla, D-Max, etc.</p>
+      <label>Registration Number *</label><br>
+      <input type="text">
+      <p>e.g. KAA 000 A, etc.</p>
+      <label>Operator</label><br>
+      <input type="text">
+      <p>e.g. John Doe, etc.</p>
+      <h1>Additional Details</h1>
+      <label>Color</label><br>
+      <input type="text"><br>
+      <label>Body Type</label><br>
+      <input type="text"><br>
+      <label>Body Subtype</label><br>
+      <input type="text"><br>
+      <button
+        style="margin-top: 15px; background-color: #eee; border-radius: 10px; cursor: pointer; color: darkblue; padding-top: 5px; padding-bottom: 5px; padding-left: 10px; padding-right: 10px; border: 1px solid; margin-right: 100px;">Cancel</button>
+      <button type="submit"
+        style="margin-top: 15px;  border-radius: 10px; cursor: pointer; padding-top: 5px; padding-bottom: 5px; padding-left: 10px; padding-right: 10px; border: 1px solid;">Save
+        & Add Another</button>
+      <button type="submit"
+        style="margin-top: 15px;  background-color: darkblue; border-radius: 10px; cursor: pointer; color: white; padding-top: 5px; padding-bottom: 5px; padding-left: 10px; padding-right: 10px; border: none;">Save
+        Vehicle</button>
+    </form>
+  </main>
+
+  <footer>
+    <div class="footer-flex">
+      <div>
+        <h2>CONTACT INFO</h2>
+        <p>Address No. 123456 street</p>
+        <p>New City, Country</p>
+        <p>Mobile: +254 700000007</p>
+        <p>Email: example@gmail.com</p>
+      </div>
+      <div>
+        <h2>MODULES</h2>
+        <ul>
+          <li>Transport Module</li>
+          <li>Login Module</li>
+          <li>Driver Module</li>
+          <li>Truck Module</li>
+        </ul>
+      </div>
+      <div>
+        <h2>PROJECT LINKS</h2>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="register.html">Register</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>ABOUT IFLEET</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. <br>
+          Praesentium ratione modi aperiam ipsa necessitatibus, <br>
+          temporibus aspernatur nihil minus, numquam voluptas nostrum <br>
+          nisi reiciendis eos! Amet nobis eaque at vero dolorem?</p>
+      </div>
+    </div>
+    <p class="end">Made by Excels Kennedy &copy; 2024</p>
+  </footer>
+
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+  </script>
+</body>

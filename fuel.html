@@ -4,64 +4,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ifleet Company Dashboard</title>
+    <title>Ifleet-Place an order</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
     <script src="https://kit.fontawesome.com/4175a2b915.js" crossorigin="anonymous"></script>
     <style>
         body {
             background-color: #eee;
         }
 
-        .flex {
-            display: flex;
-            margin-left: 5px;
-            margin-right: 5px;
+        main {
+            padding-top: 90px;
         }
 
-        .flex div {
-            margin-right: 35px;
-            background: rgb(75, 31, 233);
-            padding: 64px;
-            border-radius: 50%;
-            text-align: center;
+        form {
+            padding: 20px;
+            background-color: white;
+            width: 50%;
+            margin-left: 25%;
         }
 
-        .flex a {
+        input {
+            width: 10cm;
+        }
+
+        button{
+            background-color: darkblue;
+            padding: 5px;
             color: white;
+            margin-top: 5px;
+            border-radius: 5px;
         }
 
-        h1 {
-            text-align: left;
-            padding-left: 10%;
-            background-color: rgb(41, 8, 160);
-            color: white;
-            margin-bottom: 40px;
-            padding-top: 20px;
-            padding-bottom: 20px;
-            margin-top: 70px;
-        }
-
-        @media only screen and (max-width: 700px) {
-            .flex {
-                display: block;
-                margin-left: 30px;
-                margin-right: 5px;
+        @media only screen and (max-width: 770px) {
+            form {
+                padding: 20px;
+                background-color: white;
+                width: 90vw;
+                margin-left: 25px;
+                margin-top: 20px;
             }
 
-            .flex div {
-                margin-bottom: 10px;
-                padding: 20px;
-                border-radius: 0;
-                text-align: center;
-            }
-
-            h1 {
-                font-size: 30px;
-                text-align: center;
-                color: white;
-                margin-bottom: 20px;
-                padding: 20px;
+            input {
+                width: 80vw;
             }
         }
     </style>
@@ -72,30 +58,30 @@
         <nav>
             <div class="topnav" id="myTopnav">
                 <div class="logo">
-                  <a href="index.html">IFLEET</a>
+                    <a href="index.html">IFLEET</a>
                 </div>
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
                 <a href="contact.html">Contact Us</a>
                 <!-- if user is authenticated -->
-                <a href="dashboard.html" class="active">Dashboard</a>
+                <a href="dashboard.html">Dashboard</a>
                 <div class="dropdown">
-                  <button class="dropbtn">Administration
-                    <i class="fa fa-caret-down"></i>
-                  </button>
-                  <div class="dropdown-content">
-                    <a href="add_transport.html">Add new transport</a>
-                    <a href="transport_report.html">Transport Report</a>
-                  </div>
+                    <button class="dropbtn">Administration
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="add_transport.html">Add new transport</a>
+                        <a href="transport_report.html">Transport Report</a>
+                    </div>
                 </div>
                 <div class="dropdown">
-                  <button class="dropbtn">My Account
-                    <i class="fa fa-caret-down"></i>
-                  </button>
-                  <div class="dropdown-content">
-                    <a href="my_account.html">My Account</a>
-                    <a href="change_password.html">Change Password</a>
-                  </div>
+                    <button class="dropbtn">My Account
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="my_account.html">My Account</a>
+                        <a href="change_password.html">Change Password</a>
+                    </div>
                 </div>
                 <a href="">Logout</a>
                 <!-- else -->
@@ -103,23 +89,24 @@
                 <a href="login.html">Login</a>
                 <a href="contact.html">Contact us</a> -->
                 <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
-              </div>
+            </div>
         </nav>
     </header>
+
     <main>
-        <h1>COMPANY DASHBOARD</h1>
-        <div class="flex">
-            <div><a href="add_transport.html">Add transport</a></div>
-            <div><a href="transport_report.html">Transport Report</a></div>
-            <div><a href="new_vehicle.html">My Vehicles</a></div>
-            <div><a href="my_account.html">My Account</a></div>
-            <div><a href="change_password.html">Change Password</a></div>
-            <div><a href="">Logout</a></div>
-        </div>
-        <div>
-            <h1>Vehicle Overview</h1>
-            <p>Active vehicles</p>
-        </div>
+        <a style="background-color: darkblue; padding: 5px; border-radius: 10px; margin-left: 10px; margin-bottom: 10px;" href="vehicles.html">Go back</a>
+        <form>
+            <h1>Fuel Entry</h1>
+            <label>Date *</label><br>
+            <input type="date" required><br>
+            <label>Price per litre*</label><br>
+            <input type="number" required><br>
+            <label>Litres*</label><br>
+            <input type="number" required><br>
+            <label>Total*</label><br>
+            <input type="number" required><br>
+            <button type="submit">Submit</button>
+        </form>
     </main>
 
     <footer>
@@ -161,18 +148,18 @@
         <p class="end">Made by Excels Kennedy &copy; 2024</p>
     </footer>
 
-    
+
     <!-- Javascript for Toggle Menu -->
     <script>
         function myFunction() {
-          var x = document.getElementById("myTopnav");
-          if (x.className === "topnav") {
-            x.className += " responsive";
-          } else {
-            x.className = "topnav";
-          }
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
         }
-      </script>
+    </script>
 </body>
 
 </html>
